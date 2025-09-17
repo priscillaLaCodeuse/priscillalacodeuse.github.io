@@ -1,2 +1,3 @@
-# priscillalacodeuse.github.io
-Welcome to my website
+# priscillaLaCodeuse
+
+Welcome to my resume website!
