@@ -1,0 +1,100 @@
+// ------
+// COLORS
+// ------
+$black: #000;
+$bg-card: #f1f1f1;
+$bg-item: #e7e7e7;
+$border: #b1b1b1;
+$blackShadow: rgba(0, 0, 0, 0.25);
+$color1: #ff2668;
+$text: #333;
+$white: #fff;
+
+// -----
+// FONTS
+// -----
+@font-face {
+  font-family: "redHatDisplay";
+  src: url(../fonts/redHatDisplay.ttf);
+}
+
+$font1: "redHatDisplay", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+// ------
+// MIXINS
+// ------
+@mixin card {
+  background: $bg-card !important;
+  padding: 50px;
+  box-shadow: 0 0 10px $blackShadow;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+// -------
+// GENERAL
+// -------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+  transition: 0.2s ease;
+  font-size: 0.9rem;
+  color: $text;
+  font-family: $font1;
+}
+
+body {
+  background: $white !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color1;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+h2 {
+  font-size: 1.6rem !important;
+}
+
+h3 {
+  font-size: 1.2rem !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: $color1 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    color: $color1;
+  }
+
+  &:hover {
+    color: $black !important;
+
+    i {
+      color: $black;
+    }
+  }
+}
+
+.page-presentation .container {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px auto;
+}

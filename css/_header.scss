@@ -1,0 +1,66 @@
+@use "settings";
+
+// ------
+// HEADER
+// ------
+header {
+  justify-content: space-between;
+
+  @media screen and (max-width: 630px) {
+    text-align: center;
+  }
+
+  .logo {
+    max-height: 70px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  #openIcon,
+  #closeIcon {
+    display: none;
+    color: settings.$color1;
+    font-size: 2rem;
+
+    @media screen and (max-width: 630px) {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  #closeIcon {
+    display: none;
+  }
+
+  nav {
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 630px) {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    a {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    button {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    i {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: settings.$color1;
+      &:hover {
+        color: settings.$black;
+      }
+    }
+  }
+}

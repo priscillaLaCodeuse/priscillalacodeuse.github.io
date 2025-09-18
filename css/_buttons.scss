@@ -1,0 +1,27 @@
+@use "settings";
+
+// -------
+// BUTTONS
+// -------
+button {
+  padding: 5px 20px;
+  border-radius: 50px !important;
+  border: 2px solid settings.$color1;
+  color: settings.$color1;
+  box-shadow: 0 0 10px settings.$blackShadow;
+  background: transparent;
+
+  &:hover {
+    box-shadow: inset 0 0 10px settings.$black;
+  }
+}
+
+.button2 {
+  color: settings.$white;
+  background: settings.$color1;
+}
+
+.df {
+  display: flex;
+  gap: 20px;
+}

@@ -1,0 +1,50 @@
+@use "settings";
+
+// ------------
+// CONTACT PAGE
+// ------------
+
+#contact-info {
+  margin-bottom: 50px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: 630px) {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-info-container {
+      flex-direction: column;
+
+      a,
+      i {
+        color: settings.$text !important;
+      }
+
+      ul {
+        flex-wrap: wrap;
+        padding: 0;
+
+        li {
+          cursor: pointer;
+          list-style: none;
+          background: settings.$bg-item;
+          padding: 5px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px settings.$blackShadow;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    flex-direction: column;
+  }
+}

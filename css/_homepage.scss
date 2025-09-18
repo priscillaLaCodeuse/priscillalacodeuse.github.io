@@ -1,0 +1,107 @@
+@use "settings";
+
+// --------
+// HOMEPAGE
+// --------
+
+// ====
+// Hero
+// ====
+#hero .container {
+  @include settings.card;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  img {
+    width: 50%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px settings.$blackShadow);
+  }
+  .text-hero {
+    flex-direction: column;
+  }
+}
+
+// =====
+// About
+// =====
+#about .container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  text-align: center;
+}
+
+// ========
+// Projects
+// ========
+#projects .container {
+  @include settings.card;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1060px) {
+      grid-template-columns: 1fr;
+    }
+
+    a {
+      box-shadow: 0 0 10px settings.$blackShadow;
+      border-radius: 10px;
+      max-width: 350px;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px settings.$black;
+      }
+
+      .project {
+        height: 100%;
+        background: settings.$white;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: 220px;
+          border-radius: 10px 10px 0 0;
+        }
+
+        h3,
+        p {
+          text-align: center;
+        }
+
+        h3 {
+          padding: 20px;
+        }
+
+        p {
+          padding: 0 20px 20px;
+          color: settings.$text;
+        }
+      }
+    }
+  }
+}
+
+// ===
+// Cta
+// ===
+#cta {
+  margin-bottom: 50px;
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
